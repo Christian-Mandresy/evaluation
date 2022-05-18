@@ -303,7 +303,7 @@
                         </div>
                         <div class="col-md-6">
                           <div class="form-group row">
-                            <label class="col-sm-3 col-form-label">Type</label>
+                            <label class="col-sm-6 col-form-label">Type</label>
                             <div class="col-sm-9">
                               <select class="form-control" name="idTypeVehicule" <sf:input path="id_type"/> >
                                 <c:forEach items="${requestScope.ListType}" var="lists">
@@ -316,6 +316,8 @@
                       <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
                       <button class="btn btn-light">Cancel</button>
                       </sf:form>
+                    <div style="color: red"> <c:out value="${ error }"></c:out> </div>
+                    <div style="color: green"> <c:out value="${ success }"></c:out> </div>
                   </div>
                 </div>
               </div>

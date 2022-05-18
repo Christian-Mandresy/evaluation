@@ -18,7 +18,7 @@ public class Vehicule {
     private String marque;
 
     @Column
-    private String model;
+    private String modele;
 
     @Column
     @JoinColumn(insertable = false, updatable = false)
@@ -53,11 +53,11 @@ public class Vehicule {
     }
 
     public String getModel() {
-        return model;
+        return modele;
     }
 
     public void setModel(String model) {
-        this.model = model;
+        this.modele = model;
     }
 
     public int getId_type() {

@@ -22,7 +22,7 @@ CREATE TABLE user_roles (
 	id                   smallint  NOT NULL  AUTO_INCREMENT  PRIMARY KEY,
 	id_user              smallint  NOT NULL    ,
 	id_role              smallint  NOT NULL    ,
-	date_attribution     date   DEFAULT (curdate())   
+	date_attribution     date
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE vehicule ( 
@@ -37,7 +37,7 @@ CREATE TABLE echeance (
 	id                   smallint  NOT NULL    PRIMARY KEY,
 	id_vehicule          smallint  NOT NULL    ,
 	jour_restant         int  NOT NULL    ,
-	date_jour            date  NOT NULL DEFAULT (curdate())   
+	date_jour            date  NOT NULL
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE trajet ( 

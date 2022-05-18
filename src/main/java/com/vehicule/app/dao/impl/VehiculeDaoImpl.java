@@ -27,6 +27,7 @@ public class VehiculeDaoImpl implements VehiculeDao {
         catch (Exception e)
         {
             tx.rollback();
+            throw e;
         }
         finally {
             session.close();
