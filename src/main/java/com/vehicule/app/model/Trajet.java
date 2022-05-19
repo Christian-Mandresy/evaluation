@@ -1,6 +1,7 @@
 package com.vehicule.app.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table
@@ -26,10 +27,12 @@ public class Trajet {
     private int id_utilisateur;
 
     @ManyToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name = "id_vehicule",insertable = false,updatable = false)
     private Vehicule vehicule;
 
     @OneToMany(cascade=CascadeType.ALL)
-    private Situation situation;
+    @JoinColumn(name="id_trajet")
+    private Set<Situation> situation;
 
     public int getId() {
         return id;
@@ -87,11 +90,11 @@ public class Trajet {
         this.vehicule = vehicule;
     }
 
-    public Situation getSituation() {
+    public Set<Situation> getSituation() {
         return situation;
     }
 
-    public void setSituation(Situation situation) {
+    public void setSituation(Set<Situation> situation) {
         this.situation = situation;
     }
 }

@@ -18,6 +18,7 @@ public class Situation {
     private boolean depart;
 
     @Column
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date_heure;
 
     @Column

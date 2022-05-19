@@ -20,7 +20,6 @@ public class Vehicule {
     @Column
     private String modele;
 
-    @Column
     @JoinColumn(insertable = false, updatable = false)
     private int id_type;
 

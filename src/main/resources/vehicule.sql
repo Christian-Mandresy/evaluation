@@ -52,14 +52,14 @@ CREATE TABLE vehicule.trajet (
 	quantite_carburant   float  NOT NULL    ,
 	prix_carburant       float  NOT NULL    ,
 	motif                text  NOT NULL    ,
-	idutilisateur        smallint  NOT NULL DEFAULT (1)   
+	idutilisateur        smallint  NOT NULL
  ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE vehicule.situation ( 
 	id                   smallint  NOT NULL  AUTO_INCREMENT  PRIMARY KEY,
 	id_trajet            smallint  NOT NULL    ,
-	depart               boolean   DEFAULT (true)   ,
-	date_heure           datetime  NOT NULL DEFAULT (current_timestamp())   ,
+	depart               boolean   ,
+	date_heure           datetime  NOT NULL  ,
 	lieu                 varchar(100)  NOT NULL    ,
 	kilometrage          float  NOT NULL    
  ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
