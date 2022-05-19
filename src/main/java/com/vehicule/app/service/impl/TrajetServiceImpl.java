@@ -6,6 +6,8 @@ import com.vehicule.app.service.TrajetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TrajetServiceImpl implements TrajetService {
     @Autowired
@@ -15,5 +17,11 @@ public class TrajetServiceImpl implements TrajetService {
     public void save(Trajet trajet)
     {
         trajetDao.save(trajet);
+    }
+
+    @Override
+    public List findById(int id)
+    {
+        return trajetDao.findById(id);
     }
 }
