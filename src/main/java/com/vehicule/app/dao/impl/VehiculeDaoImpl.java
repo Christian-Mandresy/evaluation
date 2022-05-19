@@ -24,6 +24,26 @@ public class VehiculeDaoImpl implements VehiculeDao {
     private EcheanceDaoImpl echeanceDao;
 
     @Override
+    public List findall()
+    {
+        Session session = this.sessionFactory.openSession();
+        Transaction tx = null;
+        try {
+            tx = session.beginTransaction();
+            List type = session.createCriteria(Vehicule.class).list();
+            tx.commit();
+            return type;
+        } catch (Exception e) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            throw e;
+        } finally {
+            session.close();
+        }
+    }
+
+    @Override
     public void save(Vehicule vehicule)
     {
         Session session=this.sessionFactory.openSession();

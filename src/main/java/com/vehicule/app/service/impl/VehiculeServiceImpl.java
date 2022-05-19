@@ -28,4 +28,10 @@ public class VehiculeServiceImpl implements VehiculeService {
     {
         return vehiculeDao.vehiculeDispo();
     }
+
+    @Override
+    public List findall()
+    {
+        return vehiculeDao.findall();
+    }
 }

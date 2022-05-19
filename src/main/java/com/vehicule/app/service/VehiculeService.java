@@ -8,4 +8,6 @@ public interface VehiculeService {
     void save(Vehicule vehicule);
 
     List vehiculeDispo();
+
+    List findall();
 }
