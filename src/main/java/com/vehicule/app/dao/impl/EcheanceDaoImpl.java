@@ -1,6 +1,7 @@
 package com.vehicule.app.dao.impl;
 
-import com.vehicule.app.dao.TypeVehiculeDao;
+import com.vehicule.app.dao.EcheanceDao;
+import com.vehicule.app.model.Echeance;
 import com.vehicule.app.model.TypeVehicule;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,7 +12,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class TypeVehiculeDaoImpl implements TypeVehiculeDao {
+public class EcheanceDaoImpl implements EcheanceDao {
+
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -22,7 +24,7 @@ public class TypeVehiculeDaoImpl implements TypeVehiculeDao {
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
-            List type = session.createCriteria(TypeVehicule.class).list();
+            List type = session.createCriteria(Echeance.class).list();
             tx.commit();
             int i=0;
             return type;

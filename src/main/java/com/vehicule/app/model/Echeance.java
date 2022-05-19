@@ -1,11 +1,12 @@
 package com.vehicule.app.model;
 
+import org.springframework.stereotype.Controller;
+
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
-@Table(name = "TypeVehicule")
-public class TypeVehicule {
+@Table
+public class Echeance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
@@ -13,7 +14,6 @@ public class TypeVehicule {
 
     @Column
     private String nom;
-
 
     public int getId() {
         return id;
@@ -30,5 +30,4 @@ public class TypeVehicule {
     public void setNom(String nom) {
         this.nom = nom;
     }
-
 }

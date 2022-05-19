@@ -52,6 +52,14 @@ public class Vehicule {
         this.marque = marque;
     }
 
+    public String getModele() {
+        return modele;
+    }
+
+    public void setModele(String modele) {
+        this.modele = modele;
+    }
+
     public String getModel() {
         return modele;
     }
